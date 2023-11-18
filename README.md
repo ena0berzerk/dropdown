@@ -26,7 +26,7 @@ closeDropMenuOutside(droppedList, idActivateDropdownMenu,idThatActivateDropdownL
 <div class="dropdown">
   <p class="btn menu-btn" id="setUniqIdHere">Menu</p>
   <svg>here</svg>
-  // dd-list классу присвоить display: none; dd-list--show присвоить display: block
+  <-- dd-list классу присвоить display: none; dd-list--show присвоить display: block -->
   <div class="dd-list" id="setUniqIdHere">
     <p class="btn dd-item">Docs</p>
     <p class="btn dd-item">Price</p>
