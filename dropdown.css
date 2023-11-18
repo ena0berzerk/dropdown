@@ -1,0 +1,65 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: 'Open Sans', sans-serif;
+}
+.container {
+ width: 800px;
+ margin: auto auto;
+}
+.container h1 {
+ color: tomato;
+ margin-bottom: 24px;
+}
+.container .dropdown {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+.container .dropdown .btn {
+ user-select: none;
+ border: 1px solid #94a3b8;
+ color: #0284c7;
+ border-radius: 4px;
+ margin-bottom: 6px;
+}
+.container .dropdown .menu-btn {
+ gap: 12px;
+ display: flex;
+ align-items: center;
+ cursor: pointer;
+ padding: 0 8px;
+}
+.container .dropdown .menu-btn span {
+ margin: 0;
+ padding: 0;
+}
+.container .dropdown .menu-btn span svg {
+ width: 21px;
+ height: 21px;
+ margin-top: 6px;
+}
+.container .dropdown .dd-list {
+ display: none;
+ border: 1px solid #94a3b8;
+ border-radius: 4px;
+ font-size: 14px;
+ min-width: 94px;
+ cursor: pointer;
+ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.container .dropdown .dd-list--show {
+ display: block;
+}
+.container .dropdown .dd-list .dd-item {
+ border: none;
+ margin-bottom: 4px;
+ padding: 10px;
+}
+.container .dropdown .dd-list .dd-item:last-child {
+ margin-bottom: 0px;
+}
+.container .dropdown .dd-list .dd-item:hover {
+ background-color: #eee;
+}
