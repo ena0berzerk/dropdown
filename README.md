@@ -8,8 +8,13 @@
 
 #### JS
 
-dropMenu(dropdownList, uniqID) - присвоение .dd-list--show элементу
-closeDropMenuOutside(droppedList, idActivateDropdownMenu,idThatActivateDropdownList) - закрыть dropdown menu по клику на странице
+```js
+dropMenu(dropdownList, uniqID) // присвоение .dd-list--show элементу
+
+closeDropMenuOutside(droppedList, idActivateDropdownMenu,idThatActivateDropdownList) // закрыть dropdown menu по клику на странице
+```
+
+
 
 Эти функции применяются внутри элемента слушателя событий который активирует dropdown меню.
 
