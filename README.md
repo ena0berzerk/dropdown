@@ -23,15 +23,34 @@ closeDropMenuOutside(droppedList, idActivateDropdownMenu,idThatActivateDropdownL
 ### Шаблон dropdown
 
 ```html
-<div class="dropdown">
-  <p class="btn menu-btn" id="setUniqIdHere">Menu</p>
-  <svg>here</svg>
-  <!-- dd-list классу присвоить display: none; dd-list--show присвоить display: block -->
-  <div class="dd-list" id="setUniqIdHere">
-    <p class="btn dd-item">Docs</p>
-    <p class="btn dd-item">Price</p>
-    <p class="btn dd-item">About</p>
-    <p class="btn dd-item">Contact</p>
-  </div>
-</div>
+      <div class="dropdown">
+        <p class="btn menu-btn" {CLICK ON THIS ELEMENT TO ACTIVATE dd-list--show} id="btn-menu-1">
+          Menu
+          <svg>Here</svg>
+        </p>
+        <div class="dd-list {HERE IT'S APPEARS}(dd-list--show)" id="dd-list-1">
+          <p class="btn dd-item">Docs</p>
+          <p class="btn dd-item">Price</p>
+          <p class="btn dd-item">About</p>
+          <p class="btn dd-item">Contact</p>
+        </div>
+      </div>
+```
+
+### Пример использования в JS
+
+```js
+import dropMenu, { closeDropMenuOutside } from './js/dropdown-menu';
+
+const dropInfo = document.querySelector('#btn-menu-1');
+const dropInfoItem = document.querySelector('#dd-list-1');
+
+dropInfo.addEventListener('click', () => {
+  dropMenu(dropInfoItem, 'dd-list--show');
+  closeDropMenuOutside(
+    dropInfoItem,
+    dropInfo.id,
+    dropInfoItem.getAttribute('class').split(' ')[1]
+  );
+});
 ```
